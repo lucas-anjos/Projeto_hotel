@@ -1,0 +1,39 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+header {
+  text-align: center;
+}
+header .logo {
+  width: 10%;
+  height: auto;
+}
+header .painel {
+  width: 100%;
+}
+#modal1 img,
+#modal2 img {
+  width: 100%;
+  height: 400px;
+}
+.card-image img {
+  cursor: pointer;
+}
+#sex_masculino,
+#sex_feminino {
+  margin-left: auto !important;
+  padding-top: auto;
+  position: relative;
+  padding-left: 40px;
+}
+#hotel {
+  margin: 10%;
+}
+#culi {
+  margin: 10%;
+}
+#cards {
+  margin: 10%;
+}

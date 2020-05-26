@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <!-- Compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img src="img/logo1.png" alt="Grand Hotel" class="logo" />
+      </h1>
+
+      <!-- Barra de navegação do site -->
+      <nav>
+        <div class="nav-wrapper red darken-4" style="text-align: left;">
+          <a href="index.html" class="brand-logo">Grand Hotel</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+            ><i class="material-icons">menu</i></a
+          >
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="hotel.html">Hotel</a></li>
+            <li><a href="suites.html">Suites</a></li>
+            <li><a href="gastronomia.html">Gastronomia</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="localizacao.html">Localização</a></li>
+          </ul>
+
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="hotel.html">Hotel</a></li>
+            <li><a href="suites.html">Suites</a></li>
+            <li><a href="gastronomia.html">Gastronomia</a></li>
+            <li><a href="reservas.html">Reservas</a></li>
+            <li><a href="localizacao.html">Localização</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Fim da barra de navegação -->
+
+      <!-- Início do painel -->
+      <img src="img/painel2.jpg" alt="entrada do hotel" class="painel" />
+    </header>
+
+    <main>
+      <h2>Faça sua reserva</h2>
+      <hr />
+
+      <!--### Início da área do formulário ###-->
+
+      <div class="row">
+        <!--Início do formulário-->
+        <form class="col s12">
+          <!--Primeira linha do formulário-->
+          <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">account_circle</i>
+              <input id="nomecompleto" type="text" class="validate" />
+              <label for="nomecompleto">Nome Completo</label>
+            </div>
+
+            <div class="input-field col s6">
+              <i class="material-icons prefix">email</i>
+              <input id="email" type="email" class="validate" />
+              <label for="email">E-Mail</label>
+            </div>
+            <!--Fim da primeira linha do formulário-->
+          </div>
+
+          <!--Segunda linha do formulário-->
+          <div class="row">
+            <div class="input-field col s3">
+              <i class="material-icons prefix">local_phone</i>
+              <input id="telefone" type="tel" class="validate" />
+              <label for="telefone">Telefone</label>
+            </div>
+
+            <div class="input-field col s3">
+              <i class="material-icons prefix">dock</i>
+              <input id="cpf" type="text" class="validate" />
+              <label for="cpf">CPF</label>
+            </div>
+
+            <div class="input-field col s3">
+              <i class="material-icons prefix">date_range</i>
+              <input type="text" class="datepicker" />
+              <label for="datanascimento">Data de Nascimento</label>
+            </div>
+
+            <div class="input-field col s3">
+              <i class="material-icons prefix">people</i>
+              <label>Sexo</label>
+
+              <label id="sex_masculino">
+                <input name="sexo" type="radio" value="M" />
+                <span>Masculino</span>
+              </label>
+
+              <label id="sex_feminino">
+                <input name="sexo" type="radio" value="F" />
+                <span>Feminino</span>
+              </label>
+            </div>
+
+            <!--Fim da segunda linha do formulário-->
+          </div>
+
+          <hr />
+
+          <!--Terceira linha do formulário-->
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="material-icons prefix">hotel</i>
+              <select class="icons">
+                <option value="" disabled selected>Escolha sua Suite</option>
+                <option value="" data-icon="img/suite1.jpg"
+                  >Suite Single</option
+                >
+                <option value="" data-icon="img/suite2.jpg"
+                  >Suite Double</option
+                >
+                <option value="" data-icon="img/suite3.jpg"
+                  >Suite Master</option
+                >
+              </select>
+              <label>Selecione a Suite</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix">date_range</i>
+              <input type="text" class="datepicker" />
+              <label for="check-in">Check-in</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix">date_range</i>
+              <input type="text" class="datepicker" />
+              <label for="check-out">Check-out</label>
+            </div>
+
+            <!--Fim da terceira linha do formulário-->
+          </div>
+
+          <hr />
+
+          <button
+            class="btn waves-effect waves-light"
+            type="submit"
+            name="action"
+          >
+            Submit
+            <i class="material-icons right">arrow_forward</i>
+          </button>
+
+          <!--Fim do formulário-->
+        </form>
+      </div>
+      <!--### Fim da área do formulário-->
+    </main>
+
+    <footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".datepicker").datepicker();
+      });
+
+      $(document).ready(function () {
+        $("select").formSelect();
+      });
+
+      $(document).ready(function () {
+        $(".sidenav").sidenav();
+      });
+    </script>
+  </body>
+</html>
